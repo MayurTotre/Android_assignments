@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WeatherApp"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <service android:name=".ServicesDemo.MusicService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback"/>
+        <activity
+            android:name=".ServicesDemo.ServicesMainActvity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".GPS_task.LocationService"
+            android:exported="true"/>
+
+        <activity
+            android:name=".BroadcastReceiverDemo.InternetConnectionMainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".WorkManagerApiDemo.DisplayUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WorkManagerApiDemo.MainActivityUserWorkManager"
+            android:exported="true" />
+        <activity
+            android:name=".WorkmanagerDemo.MainActivityWorkManagerDemo"
+            android:exported="true" />
+        <activity
+            android:name=".RxJavaNestedCall.DIfferentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaunchModes.MainActivity_dd"
+            android:exported="false"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".LaunchModes.MainActivity_cc"
+            android:exported="false" />
+        <activity
+            android:name=".LaunchModes.MainActivity_bb"
+            android:exported="false" />
+        <activity
+            android:name=".LaunchModes.MainActivity_aa"
+            android:exported="false" />
+        <activity
+            android:name=".LaunchModes.MainActivityLaunchModes"
+            android:exported="true" />
+        <activity
+            android:name=".WithoutAsync.MainActivityWithoutAsync"
+            android:exported="false" />
+        <activity
+            android:name=".RxJavaNestedCall.MainActivityRxJavaNestedCall"
+            android:exported="true" />
+        <activity
+            android:name=".Notification.Notification"
+            android:exported="true" />
+        <activity
+            android:name=".TempActivity"
+            android:exported="true" /> <!-- <activity -->
+        <!-- android:name=".Permissions.MainActivityPermissions" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".RetrofitResponseCallback.MainActivityWeatherResponseCallback"
+            android:exported="true" />
+        <activity
+            android:name=".RetrofitNestedApi.MainActivity_RetrofitNestedAPi"
+            android:exported="false" />
+        <activity
+            android:name=".WeatherVolley.MainActivityWeatherWithVolley"
+            android:exported="false" />
+        <activity
+            android:name=".HTTPURL.MainActivityWeatherHTTPURL"
+            android:exported="true" />
+        <activity
+            android:name=".WeatherMVVMRxJava.View.MainActivityWeatherMVVMRxjava"
+            android:exported="false" />
+        <activity
+            android:name=".WeatherMVP.MainActivityMVP"
+            android:exported="false" />
+        <activity
+            android:name=".WeatherNoArchitecture.MainActivityNoArcitecture"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HTTPURLNestedApiCall.MainActivityHTTPURLNestedCall"
+            android:exported="false" />
+    </application>
+
+</manifest>
