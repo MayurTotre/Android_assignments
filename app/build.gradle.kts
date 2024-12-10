@@ -82,7 +82,7 @@ dependencies {
 
     implementation("com.google.android.gms:play-services-location:21.3.0")
 
-    //crashlutics
+    //crashlytics
     implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
     implementation("com.google.firebase:firebase-crashlytics")
     implementation("com.google.firebase:firebase-analytics")

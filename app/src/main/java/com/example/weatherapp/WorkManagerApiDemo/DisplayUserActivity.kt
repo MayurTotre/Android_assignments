@@ -68,10 +68,8 @@ class DisplayUserActivity : AppCompatActivity(), DisplayUserAdapter.onClickDelet
                 lifecycleScope.launch {
                     database.userDao().deleteUser(user)
                 }
-
             }
             .create()
             .show()
-
     }
 }

@@ -19,12 +19,8 @@
         android:theme="@style/Theme.WeatherApp"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
-        <service android:name=".ServicesDemo.MusicService"
-            android:exported="false"
-            android:foregroundServiceType="mediaPlayback"/>
         <activity
-            android:name=".ServicesDemo.ServicesMainActvity"
+            android:name=".CurrentLocation2.UserLocation"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,11 +28,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".GPS_task.LocationService"
+            android:name=".CurrentLocation.UserLocation"
             android:exported="true"/>
 
+
+        <service
+            android:name=".ServicesDemo.MusicService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
+
+        <activity
+            android:name=".ServicesDemo.ServicesMainActvity"
+            android:exported="true" />
+        <activity
+            android:name=".GPS_task.LocationService"
+            android:exported="true" />
         <activity
             android:name=".BroadcastReceiverDemo.InternetConnectionMainActivity"
             android:exported="true" />
